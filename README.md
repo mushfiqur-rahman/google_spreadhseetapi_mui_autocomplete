@@ -35,16 +35,39 @@ $ backend > venv\scripts\activate
 (venv) PS D:\backend> py manage.py runserver
 ```
 
-__Google API__
+__Apps Script__
 
-```url
-https://script.google.com/macros/s/AKfycbws-Qe-TqCQsjSaAit2vC8QauDEyIOk8UUNn9-6w9nSLXuCpXTKWR0aTgSQlKq5ArMWjw/exec
-```
-```url
-https://script.google.com/macros/s/AKfycbwoCRdwyNjL3w_OPkpCypqFvv2i533eU8QGexzo_LTEXbxu4tX5urORn5yB2wCRzD6XMw/exec
-```
-```url
-https://script.google.com/macros/s/AKfycbxeoC3WKs1qmhAAoOCfJENl-OqdWiI36Tct1Jqv38QYjX3kH-l-PJOzOvfGkAqmDmUbGg/exec
+```javascript
+function doGet(req) {
+  var doc = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = doc.getSheetByName('q3');
+  var values = sheet.getDataRange().getValues();
+
+  // var output = [];
+  // for(var i = 0; i< values.length; i++) {
+  //   var row = {};
+  //   row['Item ID '] = values[i][0];
+  //   row['Item'] = values[i][1];
+  //   row['tag 1'] = values[i][2];
+  //   row['tag 2'] = values[i][3];
+  //   row['tag 3'] = values[i][4];
+
+  //   output.push(row);
+  // }
+
+  var studentQ3 = values.map(function(row){
+    var formattedRow = [];
+    for( var i =0; i<row.length; i++){
+      var cellValue = row[i].toString().trim();
+      if (cellValue !== ""){
+        formattedRow.push(cellValue);
+      }
+    }
+    return formattedRow;
+  });
+
+  return ContentService.createTextOutput(JSON.stringify(studentQ3)).setMimeType(ContentService.MimeType.JSON);
+}
 ```
 ____
 ### Student Needs API URL
