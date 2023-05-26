@@ -18,6 +18,11 @@ $ cd frontend
 ```bash script
 $ frontent> npm install & npm run dev
 ```
+Now open your browser & got to the url
+```url
+ http://127.0.0.1:5173/
+```
+
 __For Backend__
 ```bash script
 $ cd backend
@@ -84,5 +89,5 @@ http://127.0.0.1:8000/api/services/
 
 
 ### Material UI Autocomplete
-![mui autocomplete](https://github.com/mushfiqur-rahman/GS_2_REST_2_DRF_2_MUIAutocomplete/assets/26889268/aa482a6d-5be4-455d-8b17-59463e19edb9)
+
 
