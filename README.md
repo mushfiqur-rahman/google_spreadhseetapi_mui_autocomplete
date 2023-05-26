@@ -10,7 +10,7 @@ I made this project for learning purpose where I converted Google Spreadsheed to
 __For frontend__
 
 ```bash script
-$ git clone https://github.com/mushfiqur-rahman/GS_2_REST_2_DRF_2_MUIAutocomplete
+$ git clone https://github.com/mushfiqur-rahman/google_spreadhseetapi_mui_autocomplete.git
 ```
 ```bash script
 $ cd frontend
