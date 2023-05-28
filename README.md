@@ -2,15 +2,6 @@
 
 I made this task(this is not project) for learning purpose where I converted Google Spreadsheed to REST API, then converted data formation using python django and after that I used it on React MUI autocomplete.
 
-## What you will learn: 
-___
-* How to make Google Spreadsheet to REST API?
-* How to use Google Spreadsheet API in Python Django?
-* How to Install React JS with vite js according new official Documents?
-* How to Connect Django and Reactjs using Django Rest Framework and Fetch API?
-* How to Show API data to Material UI or MUI Autocomplete?
-* How to Post MUI Autocomplete to Django through API?
-* Throttle Time set using loading function
 
 ### Tutorial
 
