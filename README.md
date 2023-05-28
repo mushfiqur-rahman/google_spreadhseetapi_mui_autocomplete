@@ -12,23 +12,80 @@ Which `code` I have use at `apps script` of Google spreadsheet:
 
 __Apps Script__
 
+> If you use below code then your data will show
+
 ```javascript
 function doGet(req) {
   var doc = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = doc.getSheetByName('q3');
   var values = sheet.getDataRange().getValues();
 
-  // var output = [];
-  // for(var i = 0; i< values.length; i++) {
-  //   var row = {};
-  //   row['Item ID '] = values[i][0];
-  //   row['Item'] = values[i][1];
-  //   row['tag 1'] = values[i][2];
-  //   row['tag 2'] = values[i][3];
-  //   row['tag 3'] = values[i][4];
 
-  //   output.push(row);
-  // }
+  var output = [];
+  for(var i = 0; i< values.length; i++) {
+    var row = {};
+    row['Item ID '] = values[i][0];
+    row['Item'] = values[i][1];
+    row['tag 1'] = values[i][2];
+    row['tag 2'] = values[i][3];
+    row['tag 3'] = values[i][4];
+
+    output.push(row);
+  }
+
+  return ContentService.createTextOutput(JSON.stringify(output)).setMimeType(ContentService.MimeType.JSON);
+}
+```
+__output__
+
+```json
+[
+  {
+    "Item ID ": "Item ID",
+    "Item": "Item",
+    "tag 1": "tag 1",
+    "tag 2": "tag 2",
+    "tag 3": "tag 3"
+  },
+  {
+    "Item ID ": 30003,
+    "Item": "Thesis",
+    "tag 1": 101,
+    "tag 2": 103,
+    "tag 3": ""
+  },
+  {
+    "Item ID ": 30004,
+    "Item": "Meditation",
+    "tag 1": 110,
+    "tag 2": 101,
+    "tag 3": 111
+  },
+  {
+    "Item ID ": 30005,
+    "Item": "Helping",
+    "tag 1": 403,
+    "tag 2": 203,
+    "tag 3": 120
+  },
+  {
+    "Item ID ": 200669,
+    "Item": "YouTube",
+    "tag 1": 542,
+    "tag 2": 87,
+    "tag 3": ""
+  }
+]
+
+```
+
+> or 
+
+```javascript
+function doGet(req) {
+  var doc = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = doc.getSheetByName('q3');
+  var values = sheet.getDataRange().getValues();
 
   var studentQ3 = values.map(function(row){
     var formattedRow = [];
@@ -44,6 +101,40 @@ function doGet(req) {
   return ContentService.createTextOutput(JSON.stringify(studentQ3)).setMimeType(ContentService.MimeType.JSON);
 }
 ```
+Output:
+```json
+[
+  [
+    "Item ID",
+    "Item",
+    "tag 1",
+    "tag 2",
+    "tag 3"
+  ],
+  [
+    "1001",
+    "Malaysia",
+    "101",
+    "102",
+    "103"
+  ],
+  [
+    "1002",
+    "Turkey",
+    "201",
+    "202",
+    "203"
+  ],
+  [
+    "1003",
+    "Bangladesh",
+    "301",
+    "302",
+    "303"
+  ]
+]
+```
+___
 
 __For frontend setup__
 
@@ -60,6 +151,7 @@ Now open your browser & got to the url
 ```url
  http://127.0.0.1:5173/
 ```
+___
 
 __For Backend setup__
 ```bash script
@@ -71,11 +163,12 @@ $ backend > py -m venv venv
 ```bash script
 $ backend > venv\scripts\activate
 ```
+```bash script
+$ backend > venv\scripts\activate
+```
+
 ```python
 (venv) PS D:\backend> python -m pip install -r requirements.txt
-```
-```bash script
-(venv) PS D:\backend> py manage.py makemigrations
 ```
 ```bash script
 (venv) PS D:\backend> py manage.py migrate

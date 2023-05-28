@@ -2,7 +2,7 @@ import requests
 
 
 def fetch_q1_data(request):
-    url = "https://script.google.com/macros/s/AKfycbws-Qe-TqCQsjSaAit2vC8QauDEyIOk8UUNn9-6w9nSLXuCpXTKWR0aTgSQlKq5ArMWjw/exec"
+    url = "https://script.google.com/macros/s/AKfycbyHZLa3WDLf-dODgTXcxhprRVnrA15w_J5pRLi99KHyuxkye8krN8l5ApI78iOVwQAxjg/exec"
 
     response = requests.get(url)
     data = response.json()
