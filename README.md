@@ -8,6 +8,8 @@ I made this task(this is not project) for learning purpose where I converted Goo
 
 ____
 
+
+ [Google Spreadsheet Link](https://docs.google.com/spreadsheets/d/1RbnStR4xLjHkSoDsGCO7xHwCl3WhASFZDHGQIY8OdvQ/edit?usp=sharing)
 Which `code` I have use at `apps script` of Google spreadsheet:
 
 __Apps Script__
@@ -80,7 +82,6 @@ __output__
 ```
 > here is the problem is spreadheet all columns has not values. For this problem I used below code.
 
-> or 
 
 ```javascript
 function doGet(req) {
