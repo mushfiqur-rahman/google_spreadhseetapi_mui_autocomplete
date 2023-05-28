@@ -1,6 +1,6 @@
 # MUI Autocomplete using Django Rest API and Google Spreadsheet API
 
-I made this project for learning purpose where I converted Google Spreadsheed to REST API, then converted data formation using python django and after that I used it on React MUI autocomplete. 
+I made this task(this is not project) for learning purpose where I converted Google Spreadsheed to REST API, then converted data formation using python django and after that I used it on React MUI autocomplete. 
 
 ### Tutorial
 
