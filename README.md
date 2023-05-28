@@ -6,39 +6,9 @@ I made this project for learning purpose where I converted Google Spreadsheed to
 
 [![YouTube Tutorial](https://img.youtube.com/vi/XRjLqDjeHjY/0.jpg)](https://www.youtube.com/watch?v=XRjLqDjeHjY)
 
+____
 
-__For frontend__
-
-```bash script
-$ git clone https://github.com/mushfiqur-rahman/google_spreadhseetapi_mui_autocomplete.git
-```
-```bash script
-$ cd frontend
-```
-```bash script
-$ frontent> npm install & npm run dev
-```
-Now open your browser & got to the url
-```url
- http://127.0.0.1:5173/
-```
-
-__For Backend__
-```bash script
-$ cd backend
-```
-```bash script
-$ backend > py -m venv venv
-```
-```bash script
-$ backend > venv\scripts\activate
-```
-```python
-(venv) PS D:\backend> python -m pip install -r requirements.txt
-```
-```bash script
-(venv) PS D:\backend> py manage.py runserver
-```
+Which `code` I have use at `apps script` of Google spreadsheet:
 
 __Apps Script__
 
@@ -74,7 +44,48 @@ function doGet(req) {
   return ContentService.createTextOutput(JSON.stringify(studentQ3)).setMimeType(ContentService.MimeType.JSON);
 }
 ```
-____
+
+__For frontend setup__
+
+```bash script
+$ git clone https://github.com/mushfiqur-rahman/google_spreadhseetapi_mui_autocomplete.git
+```
+```bash script
+$ cd frontend
+```
+```bash script
+$ frontent> npm install & npm run dev
+```
+Now open your browser & got to the url
+```url
+ http://127.0.0.1:5173/
+```
+
+__For Backend setup__
+```bash script
+$ cd backend
+```
+```bash script
+$ backend > py -m venv venv
+```
+```bash script
+$ backend > venv\scripts\activate
+```
+```python
+(venv) PS D:\backend> python -m pip install -r requirements.txt
+```
+```bash script
+(venv) PS D:\backend> py manage.py makemigrations
+```
+```bash script
+(venv) PS D:\backend> py manage.py migrate
+```
+
+
+```bash script
+(venv) PS D:\backend> py manage.py runserver
+```
+
 ### Student Needs API URL
 ```
 http://127.0.0.1:8000/q1/
