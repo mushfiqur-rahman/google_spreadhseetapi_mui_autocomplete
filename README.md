@@ -78,6 +78,7 @@ __output__
 ]
 
 ```
+> here is the problem is spreadheet all columns has not values. For this problem I used below code.
 
 > or 
 
